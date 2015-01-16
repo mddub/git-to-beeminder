@@ -1,0 +1,10 @@
+#!/bin/bash
+
+BEEMINDER_USERNAME="your username"
+BEEMINDER_GOAL="goal name"
+BEEMINDER_AUTH_TOKEN="find this under advanced settings"
+
+# Optional
+BEEMINDER_MESSAGE_PREFIX=""
+
+source /path/to/git-to-beeminder.sh
