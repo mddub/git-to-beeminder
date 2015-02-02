@@ -29,6 +29,15 @@ vi post-commit  # ...fill in config values...
 chmod +x post-commit
 ```
 
+## Notes
+
+Tested on OS X 10.10 with Git 1.9.3 and Ubuntu 14.04 with Git 1.9.1.
+
+See [this blog post][4] for more background.
+
+Contact: mark@warkmilson.com
+
 [1]: https://www.beeminder.com/
 [2]: http://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks#Client-Side-Hooks
 [3]: https://www.beeminder.com/gitminder
+[4]: http://warkmilson.com/2015/01/31/local-git-commits-to-beeminder.html
