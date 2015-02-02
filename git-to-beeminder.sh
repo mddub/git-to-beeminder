@@ -20,7 +20,7 @@ function submit_to_beeminder {
         --data "auth_token=$BEEMINDER_AUTH_TOKEN" \
         --data "value=1" \
         --data-urlencode "comment=$BEEMINDER_MESSAGE_PREFIX$commit_message"
-    echo "\n"
+    echo ""
 }
 
 function prompt {
@@ -41,7 +41,10 @@ function prompt {
 # (post-commit hook is not run in an interactive environment)
 exec < /dev/tty
 
-prompt
+# Don't prompt if a rebase is in progress
+if [ ! -d "$(git rev-parse --show-toplevel)/.git/rebase-merge" ]; then
+    prompt
+fi
 
 # Close stdin
 exec <&-
