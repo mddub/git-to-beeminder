@@ -23,10 +23,11 @@ Assuming you don't already have a `post-commit` hook:
 
 i.e.:
 ```
-cp post-commit.sample /path/to/your/repo/.git/hooks/post-commit
+cp post-commit.sample /path/to/your/repo/.git/hooks/
 cd $_
-vi post-commit  # ...fill in config values...
+mv post-commit.sample post-commit
 chmod +x post-commit
+vi post-commit  # ...fill in config values...
 ```
 
 ## Notes
